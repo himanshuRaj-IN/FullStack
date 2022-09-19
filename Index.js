@@ -14,7 +14,7 @@ app.get("/api/test", (req, res) => {
   res.send("test");
 });
 
-app.use(express.static(path.join(__dirname, "./frontend/my-app/build")));
+app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 app.get("*", function (_, res) {
   res.sendFile(
